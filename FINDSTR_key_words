@@ -1,0 +1,6 @@
+echo Processing starts %time% >> "C:\test_file.txt"
+set key_word="SYSPROCESSNAME"
+findstr /s /i /c:%key_word% "F:\srv_logs\SASJobLogs\*.log" > "C:\test_file1.txt"
+set key_word="%%INCLUDE"
+findstr /s /i /c:%key_word% "F:\srv_logs\SASJobLogs\*.log" >> "C:\test_file1.txt"
+echo Processing stops %time% >> "C:\test_file.txt"
